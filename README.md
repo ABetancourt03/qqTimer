@@ -1,11 +1,14 @@
 # qqTimer
 
 qqTimer is a light-weight speedcubing timer written in Javascript by Michael Gottlieb.
-This repository is for Lucas Garron's experimentations for qqTimer features.
+This repository is a dark version of qqTimer.
+
+Only run's with a dark background.
+By default the background is <White/>
+to Change go to timer options and change background color.
+
+¡¡happy Cubing ;D!!
 
 Official url: <http://mzrg.com/qqtimer/>  
 Unofficial mirror: <https://www.qqtimer.net/>
-
-## [Speedsolving.com](http://www.speedsolving.com/forum/) Threads
-- [Introducing qqTimer!](http://www.speedsolving.com/forum/showthread.php?14526-Introducing-qqTimer!)
-- [Huge qqTimer Update!](http://www.speedsolving.com/forum/showthread.php?34227-Huge-qqTimer-Update!&p=687729)
+My Dark Version <https://qqtimer.netlify.app/>
