@@ -1,8 +1,18 @@
 .a {
  color: blue;
  text-decoration: underline;
- cursor: pointer }
+ cursor: pointer;
+}
+
 .b {
- cursor: pointer }
+ cursor: pointer;
+}
+
 span.b:hover {
- color: red }
+ color: #0099ff;
+}
+
+td {
+ font-family: sans-sefif;
+ font-size: 1em;
+}
