@@ -97,6 +97,7 @@ function initialize(lookForTimes, checkQueryString) {
  $('lcol').value = (a=getCookie("lColor"))===null ? "blue" : a;
  $('hcol').value = (a=getCookie("hColor"))===null ? "yellow" : a;
  $('memcol').value = (a=getCookie("memColor"))===null ? "green" : a;
+ $('inspectcol').value = (a=getCookie("inspectColor"))===null ? "red" : a;
  $('inputTimes').innerHTML = (manualEnter==1) ? "typing" : "timer";
  $('theTime').innerHTML = (manualEnter==1) ?
   "<input id='timeEntry' size=12 style='font-size:100%'>"+
@@ -202,7 +203,7 @@ function startTimer(keyCode) {
   if (inspection == 1) {
    timerStatus = 2;
    inspectionTime = new Date();
-   $('theTime').style.color = "cb3234";
+   $('theTime').style.color = $('inspectcol').value;
    if (timerupdate != 0) {inspectionID = setInterval(updateInspec, (timerupdate==1)?10:100);}
    else {$('theTime').innerHTML = "inspecting";}
   } else if (useBld == 1) {
@@ -662,6 +663,7 @@ function changeColor() {
  setCookie("lColor", $('lcol').value);
  setCookie("hColor", $('hcol').value);
  setCookie("memColor", $('memcol').value);
+ setCookie("inspectColor", $('inspectcol').value)
 }
 
 function parseColor(str) {
@@ -681,6 +683,7 @@ function resetColors() {
  $('lcol').value = "blue";
  $('hcol').value = "yellow";
  $('memcol').value = "green";
+ $('inspectcol').value = "red";
  changeColor();
 }
 
@@ -2360,7 +2363,8 @@ function megascramble(turns, suffixes){
     text color: #<input id="fcol" value="black" size="6" maxlength="6" onchange="changeColor()"><br>
     link color: #<input id="lcol" value="blue" size="6" maxlength="6" onchange="changeColor()"><br>
     highlight color: #<input id="hcol" value="yellow" size="6" maxlength="6" onchange="changeColor()"><br>
-    memorization colour: #<input id="memcol" value="green" size="6" maxlength="6" onchange="changeColor()"><br>
+    memorization color: #<input id="memcol" value="green" size="6" maxlength="6" onchange="changeColor()"><br>
+    inspection color: #<input id="inspectcol" value="red" size="6" maxlength="6" onchange="changeColor()"><br>
     <span class="a" onclick="resetColors()">reset</span> colors to default<br>
 	<span class="a" onclick="toggleNightMode()">toggle</span> night mode<br>
    </td></tr></tbody></table>
